@@ -46,12 +46,12 @@ app.post("/send", (req, res) => {
     `;
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "mail.nadab.co.ke",
+    host: "mail.something.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "info@nadab.co.ke", // generated ethereal user
-      pass: "@Nadab19" // generated ethereal password
+      user: "info@something.com", // generated ethereal user
+      pass: "something" // generated ethereal password
     },
     tls: {
       rejectUnauthorized: false //running from localhost
@@ -60,8 +60,8 @@ app.post("/send", (req, res) => {
 
   // setup email data with unicode symbols
   let mailOptions = {
-    from: '"Nodemailer Contact" <info@nadab.co.ke>', // sender address
-    to: "kenkarolz99@gmail.com", // list of receivers
+    from: '"Nodemailer Contact" <info@something.com>', // sender address
+    to: "something.com", // list of receivers
     subject: "Node Contact Request", // Subject line
     text: "Hello world?", // plain text body
     html: output // html body
